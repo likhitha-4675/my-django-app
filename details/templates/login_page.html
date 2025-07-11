@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Check</title>
+</head>
+<body>
+    <h2>Check Username</h2>
+    <form method="POST" action="/username/">
+        {% csrf_token %}
+        <input type="text" name="username">
+        <input type="submit" value="Check Username">
+    </form>
+
+    <h2>Check Email</h2>
+    <form method="POST" action="/email/">
+        {% csrf_token %}
+        <input type="text" name="email">
+        <input type="submit" value="Check Email">
+    </form>
+
+    <h2>Check Password</h2>
+    <form method="POST" action="/password/">
+        {% csrf_token %}
+        <input type="password" name="password">
+        <input type="submit" value="Check Password">
+    </form>
+</body>
+</html>
